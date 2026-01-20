@@ -1,0 +1,26 @@
+/* 调整 Utterances 评论区容器整体位置 */
+#utterances-container {
+  /* 水平居中（解决偏移问题） */
+  margin: 20px auto !important;  /* 上下边距 20px，左右自动居中 */
+  max-width: 800px !important;   /* 限制最大宽度，和文章内容对齐（可改：如 90%/750px） */
+  width: 90% !important;         /* 自适应宽度，适配不同屏幕 */
+  padding: 0 15px !important;    /* 左右内边距，避免贴边 */
+  position: relative !important; /* 修复定位偏移 */
+  left: 3 !important;            /* 强制左偏移为 0，解决偏位 */
+  top: 0 !important;             /* 强制上偏移为 0，解决偏位 */
+}
+
+/* 调整 Utterances 内嵌 iframe 样式（核心） */
+#utterances-container iframe {
+  width: 100% !important;        /* 让评论区宽度和容器一致 */
+  border: none !important;       /* 去掉默认边框 */
+  margin: 0 !important;          /* 去掉 iframe 自带边距 */
+  box-sizing: border-box !important; /* 盒模型适配 */
+}
+
+/* 可选：若评论区和上方“评论区”标题间距不对，补充以下代码 */
+/* 先找到“评论区”标题的容器（假设类名是 .comment-title），可根据实际 DOM 调整 */
+.comment-title {
+  margin-bottom: 10px !important; /* 标题和评论区间距 */
+  text-align: center !important;  /* 标题居中（可选） */
+}
