@@ -26,6 +26,12 @@
 .link-info p {
   color: #333;
 }
+.link-info .link-intro {
+  color: #666;
+  font-size: 13px;
+  margin-top: 5px;
+  line-height: 1.4;
+}
 .link-info a {
   color: #999;
   margin-top: 5px;
